@@ -1,8 +1,9 @@
 /******************************************************************************
-* FILE: Assignment.c
+* FILE: Thread.c
 * 
-* AUTHOR: 
-* LAST REVISED: 07/17/2020
+* AUTHOR: Shivangi Srivastava
+* Student Id: 
+* LAST REVISED: 07/20/2020
 ******************************************************************************/
 #include <pthread.h>
 #include <stdio.h>
@@ -126,9 +127,7 @@ for(t=0;t<NUM_THREADS;t++) {
   thread_data_array[t].message = messages[t];
   thread_data_array[t].indexOne = indexOne[t];
   thread_data_array[t].indexTwo = indexTwo[t];
-  //*ptr =(int) malloc(sizeof(int[4])); 
-   
-   
+    
    //creating a threads  
   rc = pthread_create(&threads[t], NULL, threadsToSumNumbers, (void *) 
        &thread_data_array[t]);
